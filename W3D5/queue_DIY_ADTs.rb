@@ -1,6 +1,5 @@
 class Queue
-    attr_reader :queue
-
+    
     def initialize
         @queue = []
     end
@@ -16,5 +15,8 @@ class Queue
     def peek
         @queue.first
     end
+
+    private
+    attr_reader :queue
 
 end

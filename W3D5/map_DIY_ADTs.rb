@@ -1,6 +1,5 @@
 class Map
-    attr_reader :list
-
+    
     def initialize
         @list = []
     end
@@ -27,7 +26,8 @@ class Map
         p @list
     end
 
-
+    private
+    attr_reader :list
 end
 
 
