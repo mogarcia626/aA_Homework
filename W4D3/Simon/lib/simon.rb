@@ -10,28 +10,38 @@ class Simon
   end
 
   def play
+    system('clear')
     until @game_over
       take_turn
+      system("clear")
     end
-    game_over_message
+    score = sequence_length - 1
     reset_game
+    game_over_message(score)
   end
 
   def take_turn
     show_sequence
     require_sequence
+    sleep 0.15
     round_success_message unless @game_over
+    sleep 0.5
     @sequence_length += 1 unless @game_over
   end
 
   def show_sequence
     add_random_color 
-     p seq
+    @seq.each do |color|
+      puts color
+      sleep 1.5
+      system("clear")
+      sleep 0.5
+    end
   end
 
   def require_sequence
+    puts 'Your Guess:'
     seq.each do |color|
-      p 'Your Guess:'
       guess = gets.chomp
       @game_over = true if guess != color 
       break if @game_over == true
@@ -43,11 +53,11 @@ class Simon
   end
 
   def round_success_message
-    p "Correct! Onto the next round."
+    "Correct! Onto the next round."
   end
 
-  def game_over_message
-    p "Game Over! your score is #{@sequence_length-1}"
+  def game_over_message(score)
+    "Game Over! your score is #{score}"
   end
 
   def reset_game
