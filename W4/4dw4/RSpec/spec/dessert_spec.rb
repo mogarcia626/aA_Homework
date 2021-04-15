@@ -12,7 +12,7 @@ describe Dessert do
 
   describe "#initialize" do
 
-    it "sets a type" do
+    it "sets a type" dog
     expect(pudding.type).to eq('pudding')
     end
 
