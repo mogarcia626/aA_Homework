@@ -1,0 +1,137 @@
+  [1m[35m (1394.6ms)[0m  [1m[35mCREATE DATABASE "intro_to_rails_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (822.8ms)[0m  [1m[35mCREATE DATABASE "intro_to_rails_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (76.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (49.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7126514712200780400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePerson (20210415120657)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (47.6ms)[0m  [1m[35mCREATE TABLE "people" ("id" bigserial primary key, "name" character varying NOT NULL)[0m
+  ↳ db/migrate/20210415120657_create_person.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210415120657"]]
+  ↳ bin/rails:9
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+Migrating to CreateHouse (20210415120716)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (46.3ms)[0m  [1m[35mCREATE TABLE "houses" ("id" bigserial primary key, "address" character varying NOT NULL)[0m
+  ↳ db/migrate/20210415120716_create_house.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210415120716"]]
+  ↳ bin/rails:9
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-15 12:23:48.822726"], ["updated_at", "2021-04-15 12:23:48.822726"]]
+  ↳ bin/rails:9
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(7126514712200780400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7126514712200780400)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddHouseIdToPeople (20210415122607)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7126514712200780400)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7126514712200780400)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddHouseIdToPeople (20210415122607)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7126514712200780400)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7126514712200780400)[0m
+  ↳ bin/rails:9
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddHouseIdToPeople (20210415122607)
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "people" ADD "house_id" integer NOT NULL[0m
+  ↳ db/migrate/20210415122607_add_house_id_to_people.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (7.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210415122607"]]
+  ↳ bin/rails:9
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (3.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(7126514712200780400)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mPerson Load (0.9ms)[0m  [1m[34mSELECT  "people".* FROM "people" ORDER BY "people"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (3.2ms)[0m  [1m[32mINSERT INTO "people" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Moustafa"]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT  "people".* FROM "people" ORDER BY "people"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (0.9ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."name" = $1 LIMIT $2[0m  [["name", "Moustafa"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (2.2ms)[0m  [1m[32mINSERT INTO "people" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Moustafa"]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (1.4ms)[0m  [1m[32mINSERT INTO "people" ("name", "house_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Moustafa"], ["house_id", 1]]
+  [1m[35m (22.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT  "people".* FROM "people" ORDER BY "people"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mPerson Load (1.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (1.5ms)[0m  [1m[32mINSERT INTO "people" ("name", "house_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Tron"], ["house_id", 3]]
+  [1m[35m (10.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.7ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT  "people".* FROM "people" ORDER BY "people"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Destroy (0.9ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = $1[0m  [["id", 4]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (6.4ms)[0m  [1m[32mINSERT INTO "people" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Moustafa"]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHouse Create (1.7ms)[0m  [1m[32mINSERT INTO "houses" ("address") VALUES ($1) RETURNING "id"[0m  [["address", "308 Negra Arroyo Lane"]]
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPerson Create (0.9ms)[0m  [1m[32mINSERT INTO "people" ("name", "house_id") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Walter White"], ["house_id", 1]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPerson Load (0.5ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."house_id" = $1[0m  [["house_id", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  [1m[36mHouse Load (0.8ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mPerson Load (3.3ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  [1m[36mHouse Load (1.1ms)[0m  [1m[34mSELECT "houses".* FROM "houses"[0m
+  [1m[36mHouse Load (0.7ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT "people".* FROM "people" WHERE "people"."house_id" = $1[0m  [["house_id", 1]]
+  [1m[36mPerson Load (0.4ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mPerson Load (0.6ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.4ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mHouse Load (0.7ms)[0m  [1m[34mSELECT  "houses".* FROM "houses" WHERE "houses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (10.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/moustafa/.rbenv/versions/2.5.1/bin/annotate:23
